@@ -160,16 +160,24 @@
   font-size: 32px;
 }
 
-/* Adicionei esta nova regra para estilizar os SVGs que não existem no Devicon */
+/* Regra geral para todos os SVGs dentro das caixas de skills */
 .skills-box svg {
-  width: 45px;
-  height: 45px;
+  height: 45px; /* Altura igual aos ícones do Devicon */
+  width: auto;  /* Largura automática para manter a proporção */
   margin-right: 10px;
-  /* Isso ajuda a alinhar os SVGs com a base dos ícones de fonte */
-  vertical-align: middle; 
-  /* Define uma cor padrão para os SVGs, você pode alterar */
-  fill: #FFF; /* Alterado para branco para melhor contraste */
+  vertical-align: middle; /* Alinha verticalmente com os outros ícones */
+  display: inline-block; /* Garante que o alinhamento funcione bem */
 }
+
+/* Cores específicas para cada logo SVG */
+#rancher-icon path {
+  fill: #0075A8; /* Cor oficial do Rancher */
+}
+
+#outsystems-icon path {
+  fill: #DA291C; /* Cor oficial do Outsystems */
+}
+
 
 #skills-container {
   display: flex;
@@ -178,7 +186,7 @@
 }
 
 .skills-box {
-  flex: 1 1 50%; /* Alterado para 50% para melhor distribuição com 4 caixas */
+  flex: 1 1 50%;
   max-width: 50%;
   margin-bottom: 35px;
 }
@@ -214,7 +222,7 @@
   }
 
   #bio-container p {
-    max-width: 80%; /* Aumentado para melhor leitura */
+    max-width: 80%;
     margin: 10px auto;
   }
 
@@ -244,10 +252,8 @@
     font-size: 60px;
   }
   
-  /* Adicionei a regra para o SVG no mobile também */
   .skills-box svg {
-    width: 60px;
-    height: 60px;
+    height: 60px; /* Aumenta o tamanho para mobile, mantendo consistência */
   }
 }
 
