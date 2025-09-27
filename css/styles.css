@@ -160,6 +160,17 @@
   font-size: 32px;
 }
 
+/* Adicionei esta nova regra para estilizar os SVGs que não existem no Devicon */
+.skills-box svg {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+  /* Isso ajuda a alinhar os SVGs com a base dos ícones de fonte */
+  vertical-align: middle; 
+  /* Define uma cor padrão para os SVGs, você pode alterar */
+  fill: #FFF; /* Alterado para branco para melhor contraste */
+}
+
 #skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -167,8 +178,8 @@
 }
 
 .skills-box {
-  flex: 1 1 33%;
-  max-width: 33%;
+  flex: 1 1 50%; /* Alterado para 50% para melhor distribuição com 4 caixas */
+  max-width: 50%;
   margin-bottom: 35px;
 }
 
@@ -203,7 +214,7 @@
   }
 
   #bio-container p {
-    max-width: 60%;
+    max-width: 80%; /* Aumentado para melhor leitura */
     margin: 10px auto;
   }
 
@@ -232,5 +243,11 @@
   .skills-box i {
     font-size: 60px;
   }
-
+  
+  /* Adicionei a regra para o SVG no mobile também */
+  .skills-box svg {
+    width: 60px;
+    height: 60px;
+  }
 }
+
