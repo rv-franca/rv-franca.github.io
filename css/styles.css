@@ -169,12 +169,7 @@
   display: inline-block; /* Garante que o alinhamento funcione bem */
 }
 
-/* Cores específicas para cada logo */
-
-/* Cor para o ícone do Rancher */
-#rancher-icon path {
-  fill: #0075A8; /* Azul oficial do Rancher */
-}
+/* --- ESTILOS DOS ÍCONES CUSTOMIZADOS --- */
 
 /* Cor para o ícone da Outsystems */
 #outsystems-icon path {
@@ -189,6 +184,19 @@
 /* Cor para o ícone do Ansible */
 #ansible-icon {
   color: var(--main-text-color); /* Usa a cor branca padrão do texto */
+}
+
+/* SOLUÇÃO DEFINITIVA PARA O RANCHER */
+#rancher-icon {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M17.431 3.297H3.852L2.568 7.427h18.864L20.148 3.297h-2.717zm-13.579 5.415L2.568 13.5h18.864l-1.284-4.788H3.852zm9.106 5.867l-2.023 5.124H8.91l2.022-5.124h2.025z' fill='%230075A8'/%3e%3c/svg%3e");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #skills-container {
@@ -267,6 +275,11 @@
   .skills-box svg {
     height: 60px; /* Aumenta o tamanho para mobile, mantendo consistência */
     width: 60px;
+  }
+
+  #rancher-icon {
+    width: 60px;
+    height: 60px;
   }
 }
 
